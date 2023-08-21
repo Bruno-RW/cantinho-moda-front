@@ -1,6 +1,12 @@
+import Jornal from "./footer/Jornal";
+import SiteFooter from "./footer/SiteFooter";
+
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
+    <footer>
+      <Jornal />
+      <SiteFooter />
+    </footer>
+  );
 }
 export default Footer;
