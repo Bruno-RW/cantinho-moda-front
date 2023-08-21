@@ -7,21 +7,22 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const SiteFooter = () => {
 
+    const divClass =  "flex flex-col items-start mt-5 md:mt-0 mb-5";
     const h4Class =   "text-sm font-bold pb-5";
     const pClass =    "text-sm text-[#222] font-medium mb-2";
-    const linkClass = "text-sm text-[#222] font-medium mb-[10px] no-underline";
+    const linkClass = "text-sm text-[#222] font-medium mb-[10px] no-underline hover:text-[#B79130]";
     
   return (
-        <section id="footer" className="flex flex-wrap justify-between columns-4 pt-10 pb-5 px-20">
-            <div className="flex flex-col items-start">
-                <Image src="/images/icons/logos/logo-black-lg.png" width={200} height={200} className="mb-[30px]" alt="" />
+        <section id="footer" className="flex flex-wrap justify-between columns-4 pt-5 pb-3 px-5 lg:pt-10 lg:pb-5 lg:px-20">
+            <div className="flex flex-col items-start md:max-w-[200px] lg:max-w-sm">
+                <Image src="/images/icons/logos/logo-black-lg.png" width={200} height={200} className="mb-[30px] max-w-[150px] lg:max-w-xs" alt="" />
                 <h4 className={h4Class}>Contact</h4>
                 <p className={pClass}><span className="font-bold">Schedule: </span> Monday to Friday, 08:30 AM - 06:00 PM</p>
                 <p className={pClass}><span className="font-bold">Address: </span> Avenida Tucunduva, 300 - Room 101</p>
                 <p className={pClass}><span className="font-bold">Phone: </span> (55) 9 9988-0103</p>
             </div>
 
-            <div className="flex flex-col items-start mt-5 sm:mt-0 mb-5">
+            <div className={divClass}>
                 <h4 className={h4Class}>Informations</h4>
                 <Link href="/terms-conditions" className={linkClass}>Terms & Conditions</Link>
                 <Link href="/privacy-politics" className={linkClass}>Privacy Politics</Link>
@@ -29,15 +30,15 @@ const SiteFooter = () => {
                 <Link href="/contact"          className={linkClass}>About Us</Link>
             </div>
 
-            <div className="flex flex-col items-start mt-5 md:mt-0 mb-5">
+            <div className={divClass}>
                 <h4 className={h4Class}>My Account</h4>
                 <Link href="/favorites" className={linkClass}>Favorites</Link>
+                <Link href="/logout"    className={linkClass}>Log Out</Link>
                 <Link href="/sign"      className={linkClass}>Sign In</Link>
                 <Link href="/login"     className={linkClass}>Log In</Link>
-                <Link href="/logout"    className={linkClass}>Log Out</Link>
             </div>
 
-            <div className="flex flex-col items-start mt-5 lg:mt-0 mb-5">
+            <div className={divClass}>
                 <h4 className={h4Class}>Payment Methods</h4>
                 <div className="flex">
                     <Image src="/images/icons/payment/visa.png"   width={50} height={40} className="mr-1" alt="" />
