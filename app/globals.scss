@@ -25,29 +25,6 @@ body {
 
 header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-
-  nav {
-    a {
-      .ativo, &:hover {
-        color: #B79130;
-        transition: .3s ease;
-
-        &::after {
-          position: absolute;
-          content: "";
-      
-          width: 30%;
-          height: 2px;
-      
-          left: 20px;
-          bottom: -4px;
-      
-          background-color: #B79130;
-        }
-      }
-    }
-  }
-  
 }
 
 footer {
