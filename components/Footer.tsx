@@ -1,5 +1,5 @@
-import Jornal from "./footer/Jornal";
-import SiteFooter from "./footer/SiteFooter";
+import Jornal from "./footer/jornal/Jornal";
+import SiteFooter from "./footer/sitefooter/SiteFooter";
 
 const Footer = () => {
   return (

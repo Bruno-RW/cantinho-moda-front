@@ -1,24 +1,22 @@
+"use client"
+
+import Image from "next/image";
 import Link from "next/link";
-// import Image from "next/image";
 
 import { FaBars } from "react-icons/fa";
-import { GrClose } from "react-icons/gr";
 
+import Navbar from "./header/Navbar";
 
 const Header = () => {
     return (
-        <header className="flex items-center justify-between sticky">
-            {/* <Link href="/"><Image src="/assets/img/icones/logos/logo-black.png" className="logo" alt="Logo"/></Link> */}
+        <header className="sticky flex items-center justify-between z-50 py-5 px-20 bg-[#E3E6F3]">
+            <Link href="/">
+                <Image src="/images/icons/logos/logo-black.png" className="logo min-w-[160px]" width={160} height={160} alt="Logo" />
+            </Link>
 
-            <nav className="flex items-center justify-center m-0">
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/catalogo">Catálogo</Link></li>
-                <li><Link href="/sobre">Sobre</Link></li>
-                <li><Link href="/contato">Contato</Link></li>
-                <Link href="#" id="fechar"><GrClose size={22}/></Link>
-            </nav>
+            <Navbar />
 
-            <div id="celular">
+            <div id="celular" className="hidden">
                 <FaBars />
             </div>
         </header>
