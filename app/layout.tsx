@@ -2,6 +2,7 @@ import './globals.scss';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
+import UserProvider from '@/providers/UserProvider';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -16,9 +17,11 @@ export default function RootLayout( {children}: {children: React.ReactNode} ) {
   return (
     <html lang="pt-br">
       <body className={font.className}>
-        <Header />
-        {children}
-        <Footer />
+        <UserProvider>
+          <Header />
+          {children}
+          <Footer />
+        </UserProvider>
       </body>
     </html>
   )
