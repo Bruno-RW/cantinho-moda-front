@@ -1,7 +1,6 @@
-import Image from "next/image";
-
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
+import Logo from "@/components/Logo";
 import ColumnTitle from "./ColumnTitle";
 import ContactInfo from "./ContactInfo";
 import ContentColumn from "./ContentColumn";
@@ -13,8 +12,8 @@ import Copyright from "./Copyright";
 const SiteFooter = () => {
   return (
         <section id="footer" className="flex flex-wrap justify-between columns-4 pt-5 pb-3 px-5 lg:pt-10 lg:pb-5 lg:px-20">
-            <div className="flex flex-col items-start md:max-w-[200px] lg:max-w-sm">
-                <Image src="/images/icons/logos/logo-black-lg.png" width={200} height={200} className="mb-[30px] max-w-[150px] lg:max-w-xs" alt="Logo" />
+            <div className="flex flex-col items-start max-w-[200px] lg:max-w-sm">
+                <Logo src="/images/icons/logos/logo-black-lg.png" className="mb-[30px] max-w-[150px] lg:max-w-xs" size={200} />
                 <ColumnTitle title="Contact" />
                 <ContactInfo label="Schedule" text="Monday to Friday, 08:30 AM - 06:00 PM" />
                 <ContactInfo label="Address" text="Avenida Tucunduva, 300 - Room 101" />
