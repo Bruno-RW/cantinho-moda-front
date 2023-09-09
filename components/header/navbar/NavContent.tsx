@@ -1,65 +1,30 @@
-import Link from "next/link";
+"use client";
+
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import Link from "next/link";
+import NavUser from "./NavUser";
 import { twMerge } from "tailwind-merge";
 
-import { FaBars } from "react-icons/fa";
+import { routes } from "@/lib/data";
 
-import useMediaQuery from "@/hooks/useMediaQuery";
+interface NavContentProps {
+    navUser?: boolean;
+    className?: string;
+}
 
-import NavUser from "./NavUser";
-
-const NavContent = () => {
-    const pathname = usePathname();
-
-    const routesDesktop = [
-        {
-            label: 'Home',
-            active: pathname === '/',
-            href: '/',
-        },
-        {
-            label: 'Catalog',
-            active: pathname === '/catalog',
-            href: '/catalog',
-        },
-        {
-            label: 'About',
-            active: pathname === '/about',
-            href: '/about',
-        },
-        {
-            label: 'Contact',
-            active: pathname === '/contact',
-            href: '/contact',
-        }
-    ];
-
-    const isMobile = useMediaQuery("(max-width: 768px)");
-    const [sideNav, setSideNav] = useState(false);
-
+const NavContent: React.FC<NavContentProps> = ({ navUser = false, className }) => {
+    const pathName = usePathname();
+    
     return (
         <>
-            {isMobile ? (
-                <>
-                    <NavUser href="/login" className="" />
-                    <li className="static sm:hidden cursor-pointer" onClick={() => setSideNav(!sideNav)}>
-                        <FaBars className={twMerge("sm:hidden absolute top-[35.5px] right-[80px]", sideNav && "right-0")} size={28} />
-                    </li>
-                </>
-
-            ) : (
-                <>
-                    {routesDesktop.map( item => (
-                        <li key={item.href} className="relative list-none px-5 text-[#1A1A1A] text-xl lg:text-base font-semibold no-underline">
-                            <Link href={item.href} className={twMerge("hover:text-[#B79130] transition duration-200", item.active && "text-[#B79130] after:absolute after:content-[''] after:w-[30%] after:h-[2px] after:left-5 after:bottom-[-4px] after:bg-[#B79130]")}>
-                                {item.label}
-                            </Link>
-                        </li>
-                    ))}
-                    <NavUser href="/login" />
-                </>
-            )}
+            {routes.map( item => (
+                <li key={item.href} className={twMerge("relative list-none px-5 text-[#1A1A1A] text-xl lg:text-base font-semibold no-underline", className)}>
+                    <Link href={item.href} className={twMerge("hover:text-[#B79130] transition duration-200", pathName === item.href && "text-[#B79130] after:absolute after:content-[''] after:w-[30%] after:h-[2px] after:left-5 after:bottom-[-4px] after:bg-[#B79130]")}>
+                        {item.label}
+                    </Link>
+                </li>
+            ))}
+            {navUser && <NavUser />}
         </>
     );
 }
