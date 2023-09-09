@@ -5,6 +5,25 @@ import masterImg from "@/public/images/icons/payment/master.png";
 import eloImg from "@/public/images/icons/payment/elo.png";
 import pixImg from "@/public/images/icons/payment/pix.png";
 
+export const routes = [
+    {
+        label: 'Home',
+        href: '/',
+    },
+    {
+        label: 'Catalog',
+        href: '/catalog',
+    },
+    {
+        label: 'About',
+        href: '/about',
+    },
+    {
+        label: 'Contact',
+        href: '/contact',
+    }
+] as const;
+
 export const storeContact = [
     {
         label: "Schedule",
@@ -39,7 +58,7 @@ export const storeInfo = [
     },
 ] as const;
 
-export const storeMyAccount = [
+export const storeAccount = [
     {
         href: "/favorites",
         label: "Favorites",
