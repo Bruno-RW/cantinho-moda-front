@@ -15,7 +15,7 @@ const Header = () => {
 
     return (
         <>
-            <header className="sticky flex top-0 items-center justify-between w-screen z-50 py-[10px] sm:py-5 px-[30px] sm:px-20 bg-[#E3E6F3]">
+            <header className="sticky flex top-0 items-center justify-between w-full z-50 py-[10px] sm:py-5 px-[30px] sm:px-20 bg-[#E3E6F3]">
                 <Logo src="/images/icons/logos/logo-black-lg.png" className="min-w-[120px] sm:min-w-[120px]" size={120} />
                 <nav>
                     <ul className="flex items-center justify-center m-0">
