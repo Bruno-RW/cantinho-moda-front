@@ -1,4 +1,5 @@
 "use client";
+
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
@@ -20,12 +21,12 @@ const Header = () => {
                     <ul className="flex items-center justify-center m-0">
                         {isMobile ? (
                             <>
-                                <NavUser href="/login" />
+                                <NavUser />
                                 <li className="md:hidden cursor-pointer" onClick={() => setSideNav(!sideNav)}>
                                     <FaBars className="absolute top-[35.5px] right-[80px]" size={28} />
                                 </li>
                             </>
-                        ) : (<NavContent navUser={true} />)}
+                        ) : (<NavContent navUser />)}
                     </ul>
                 </nav>
             </header>

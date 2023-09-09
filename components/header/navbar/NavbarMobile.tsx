@@ -11,7 +11,7 @@ const NavbarMobile = () => {
                 <TbArrowBarRight size={32}/>
             </button>
             <ul className="flex flex-col items-start justify-center">
-                <NavContent navUser={false} listClass="text-2xl mb-6" linkClass="" />
+                <NavContent navUser={false} className="text-2xl mb-6" />
             </ul>
         </nav>
     );
