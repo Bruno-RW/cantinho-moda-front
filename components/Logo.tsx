@@ -3,13 +3,27 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface LogoProps { src: string; className: string; size: number }
+import { logo } from "@/lib/data";
 
-const Logo: React.FC<LogoProps> = ({ src, className, size }) => {
+interface LogoProps {
+    src?: string;
+    height?: number;
+    className?: string;
+    quality?: number;
+    priority?: boolean
+}
+
+const Logo: React.FC<LogoProps> = ({
+    src = logo,
+    height = 80,
+    className = `max-h-[${height - height * 0.25}px] sm:max-h-[${height}px]`,
+    quality = 75,
+    priority = false
+}) => {
     return (
         <Link href="/" aria-label="Logo">
-            <Image src={src} className={className} width={size} height={size} alt="Logo" />
+            <Image src={src} className={className} height={height} alt="Logo" quality={quality} priority />
         </Link>
-    )
+    );
 }
 export default Logo;
