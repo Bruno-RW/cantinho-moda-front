@@ -34,7 +34,7 @@ const MapContent = ( {data, type}: MapContentProps ) => {
         case "payment":
             mapData = data.map((element, index) => (
                 <React.Fragment key={index}>
-                    <Image src={element.src ?? "#"} width={50} height={40} className="mr-1" alt={element.alt ?? "Payment method"} />
+                    <Image src={element.src ?? "#"} height={34} className="mr-1 last:mr-0" alt={element.alt ?? "Payment method"} />
                 </React.Fragment>
             ));
             break;
@@ -43,8 +43,8 @@ const MapContent = ( {data, type}: MapContentProps ) => {
             mapData = data.map((element, index) => {
                 return (
                     <React.Fragment key={index}>
-                        <Link href={element.href ?? "#"} target="_blank" aria-label={element.ariaLabel ?? "Social"} className="mr-1">
-                            <element.icon className="text-[#222] mr-1 hover:text-[#B79130]" size={31} />
+                        <Link href={element.href ?? "#"} target="_blank" className="mr-1 last:mr-0" aria-label={element.ariaLabel ?? "Social"}>
+                            <element.icon className="text-[#222] hover:text-[#B79130]" size={31} />
                         </Link>
                     </React.Fragment>
                 );
