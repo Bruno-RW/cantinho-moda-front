@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
 import UserProvider from '@/providers/UserProvider';
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout( {children}: {children: React.ReactNode} ) {
   return (
     <html lang="pt-br">
-      <body className={font.className}>
+      <body className={font.className} suppressHydrationWarning={true}>
         <UserProvider>
           <Header />
           {children}
@@ -24,5 +25,5 @@ export default function RootLayout( {children}: {children: React.ReactNode} ) {
         </UserProvider>
       </body>
     </html>
-  )
+  );
 }
