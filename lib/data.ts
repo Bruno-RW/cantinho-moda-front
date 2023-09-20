@@ -1,10 +1,17 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
+import logoLgImg from "@/public/images/icons/logos/logo-black-lg.png";
+
 import visaImg from "@/public/images/icons/payment/visa.png";
 import masterImg from "@/public/images/icons/payment/master.png";
 import eloImg from "@/public/images/icons/payment/elo.png";
 import pixImg from "@/public/images/icons/payment/pix.png";
 
+// --- General --- //
+export const logo = logoLgImg;
+
+
+// --- Header --- //
 export const routes = [
     {
         label: 'Home',
@@ -23,6 +30,9 @@ export const routes = [
         href: '/contact',
     }
 ] as const;
+
+
+// --- Footer --- //
 
 export const storeContact = [
     {
