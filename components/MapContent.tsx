@@ -44,7 +44,7 @@ const MapContent = ( {data, type}: MapContentProps ) => {
                 return (
                     <React.Fragment key={index}>
                         <Link href={element.href ?? "#"} target="_blank" className="mr-1 last:mr-0" aria-label={element.ariaLabel ?? "Social"}>
-                            <element.icon className="text-[#222] hover:text-[#B79130]" size={31} />
+                            <element.icon className="text-[#222] transition hover:text-[#B79130]" size={31} />
                         </Link>
                     </React.Fragment>
                 );

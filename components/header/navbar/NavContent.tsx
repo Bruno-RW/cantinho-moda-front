@@ -19,7 +19,7 @@ const NavContent: React.FC<NavContentProps> = ({ navUser = false, className }) =
         <>
             {routes.map( item => (
                 <li key={item.href} className={twMerge("relative list-none px-5 text-[#1A1A1A] text-xl lg:text-base font-semibold no-underline", className)}>
-                    <Link href={item.href} className={twMerge("hover:text-[#B79130] transition duration-200", pathName === item.href && "text-[#B79130] after:absolute after:content-[''] after:w-[30%] after:h-[2px] after:left-5 after:bottom-[-4px] after:bg-[#B79130]")}>
+                    <Link href={item.href} className={twMerge("hover:text-[#B79130] transition duration-150", pathName === item.href && "text-[#B79130] after:absolute after:content-[''] after:w-[30%] after:h-[2px] after:left-5 after:bottom-[-4px] after:bg-[#B79130]")}>
                         {item.label}
                     </Link>
                 </li>

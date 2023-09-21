@@ -14,7 +14,7 @@ import NavContent from "./header/navbar/NavContent";
 const Header = () => {    
     const [sideNav, setSideNav] = useState(false);
     const isMobile = useMediaQuery("(max-width: 768px)");
-    
+
     return (
         <>
             <header className="sticky flex top-0 items-center justify-between w-full z-50 py-[10px] sm:py-5 px-[30px] sm:px-20 bg-[#E3E6F3]">
@@ -34,8 +34,8 @@ const Header = () => {
             </header>
             
             {isMobile && (
-                <nav id="nav-mobile" className={twMerge("flex fixed top-0 right-0 items-start justify-start w-[55vw] h-screen pt-20 pl-[10px] z-50 bg-[#E3E6F3] transition duration-300", !sideNav && "hidden")}>
-                    <button type="button" id="fechar" className={"absolute top-7 left-7 text-[#222] mb-6"} onClick={() => setSideNav(!sideNav)}>
+                <nav id="nav-mobile" className={twMerge("flex fixed top-0 right-0 items-start justify-start w-[55vw] h-screen pt-20 pl-[10px] z-50 bg-[#E3E6F3] transition-all duration-150", !sideNav && "-right-[1000px]")}>
+                    <button type="button" id="fechar" className={"absolute top-7 left-7 text-[#222] mb-6 transition hover:scale-105 hover:translate-x-1"} onClick={() => setSideNav(!sideNav)}>
                         <TbArrowBarRight size={32}/>
                     </button>
         
