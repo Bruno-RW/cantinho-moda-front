@@ -17,14 +17,14 @@ const Header = () => {
 
     return (
         <>
-            <header className="section-p1 sticky flex top-0 items-center justify-between w-full z-50 py-[10px] sm:py-5 bg-[#E3E6F3]">
+            <header className="sticky flex top-0 items-center justify-between w-full z-50 py-2.5 sm:py-5 px-5 sm:px-10 lg:px-20 bg-[#E3E6F3]">
                 <Logo priority />
                 <nav className="">
                     <ul className="flex items-center justify-center m-0">
                         {isMobile ? (
                             <>
                                 <NavUser />
-                                <li className="px-3 sm:px-5 cursor-pointer list-none" onClick={() => setSideNav(!sideNav)}>
+                                <li className="pl-3 sm:pl-5 cursor-pointer list-none" onClick={() => setSideNav(!sideNav)}>
                                     <FaBars size={28} />
                                 </li>
                             </>
