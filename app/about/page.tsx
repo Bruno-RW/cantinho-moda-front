@@ -1,60 +1,35 @@
 import Image from "next/image";
 
+import { metadata } from "../layout";
+import { frequentQuestions } from "@/lib/data";
+
 import HeaderBanner from "@/components/header/HeaderBanner";
+import MapContent from "@/components/MapContent";
 
 export default function About() {
+    metadata.title = "About - Cantinho da Moda";
+
     return (
         <>
-            <HeaderBanner title="#SobreNós" text="Descubra mais sobre nós e nossa loja" />
+            <HeaderBanner title="#AboutUs" text="Discover more about us and our store" />
 
-            <section className="section-p1 flex text-center">
-                <div className="flex flex-col justify-between">
-                    <h1>Quem somos?</h1>
-                    <p>A empresa Cantinho da Moda é uma loja de moda focada em vender roupas e acessórios para mulheres de diversos gostos e necessidades. A Cantinho da Moda está sempre atualizada com as últimas tendências da moda, garantindo que nossos clientes estejam sempre elegantes.</p>
-                    <p>Além disso, nos orgulhamos de oferecer roupas e acessórios de alta qualidade. Então, se você está procurando uma loja de moda confiável e de alta qualidade, não procure mais do que a Cantinho da Moda. Venha nos visitar e veja por si mesmo tudo o que temos a oferecer!</p>
+            <section className="section-p1 flex flex-col lg:flex-row justify-between">
+                <div className="w-full lg:w-3/5 lg:mr-10 mb-10 lg:mb-0">
+                    <h1 className="text-center md:text-start mb-7">Who are we?</h1>
+                    <p className="text-xl text-justify md:text-start mb-5">The company Cantinho da Moda is a fashion store focused on selling clothes and accessories for women with different tastes and needs. Cantinho da Moda is always up to date with the latest fashion trends, ensuring that our customers are always elegant.</p>
+                    <p className="text-xl text-justify md:text-start">Additionally, we pride ourselves on offering high-quality clothing and accessories. So, if you're looking for a reliable, high-quality fashion store, look no further than Cantinho da Moda. Come visit us and see for yourself everything we have to offer!</p>
                 </div>
-                <Image src="/images/banners/b9.png" width={400} height={400} alt="" />
+
+                <Image src="/images/banners/b9.png" width={400} height={400} className="min-w-[62vw] aspect-auto lg:min-w-[42vw] xl:min-w-[32vw] 2xl:min-w-[22vw] self-center" alt="About image" />
             </section>
 
-            <section id="perguntas-frequentes" className="section-p1 d-flex flex-column">
-                <h2>Perguntas frequentes</h2>
+            <section className="section-p1 flex flex-col">
+                <h2 className="text-center md:text-start mb-5">Frequent Questions</h2>
 
-                <div className="container row justify-content-center">
-                    <div className="box d-flex flex-column justify-content-between">
-                        <h3>Por que não consigo comprar produtos?</h3>
-                        <div className="conteudo">
-                            <p>Este site possui o objetivo de expor os itens no catálogo da loja Cantinho da Moda. Caso esteja a fim de realizar a compra de produtos, dirija-se até a nossa loja física.</p>
-                        </div>
-
-                        <p>Caso necessário, entre na página de <a href="/contato">contato</a>.</p>
-                    </div>
-                    
-                    <div className="box d-flex flex-column justify-content-between">
-                        <h3>Que tipos de produtos são vendidos?</h3>
-                        <div className="conteudo">
-                            <p>Na Cantinho da Moda vendemos desde roupas de verão até roupas de inverno. Além disso, também vendemos alguns acessórios, como bolsas, brincos e colares.</p>
-                        </div>
-                        <p>Vá para a nossa página e aproveite: <a href="/catalogo">catálogo</a>.</p>
-                    </div>
-
-                    <div className="box d-flex flex-column justify-content-between">
-                        <h3>Como faço para utilizar a página "catálogo"?</h3>
-                        <div className="conteudo">
-                            <p>Basta alterar as personalizações de pesquisa, localizadas a esquerda da página, através das categorias e ordens de visualização entre preços  de produtos.</p>
-                        </div>
-                        <p>Vá agora e teste novos produtos: <a href="/catalogo">catálogo</a>.</p>
-                    </div>
-
-                    <div className="box d-flex flex-column justify-content-between">
-                        <h3>Quais são os métodos de pagamento?</h3>
-                        <div className="conteudo">
-                            <p>Ao visitar nossa loja física aceitamos cartões de débito e crédito da Visa, Mastercard, Elo e Cabal. Ademais, também aceitamos pagamento por Pix e Banri Compras</p>
-                        </div>
-                        <p>Caso tenha dúvidas, visite a página de <a href="/contato">contato</a>.</p>
-                    </div>
-
+                <div className="flex flex-wrap justify-center gap-y-5 sm:gap-x-5">
+                    <MapContent data={frequentQuestions} type="question" />
                 </div>
             </section>
         </>
-    )
+    );
 }
