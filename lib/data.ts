@@ -33,7 +33,6 @@ export const routes = [
 
 
 // --- Footer --- //
-
 export const storeContact = [
     {
         label: "Schedule",
@@ -52,18 +51,18 @@ export const storeContact = [
 export const storeInfo = [
     {
         href: "/terms-conditions",
-        label: "Schedule",
+        label: "Terms & Conditions",
     },
     {
         href: "/privacy-politics",
-        label: "Address",
-    },
-    {
-        href: "/about",
-        label: "Phone",
+        label: "Privacy Politics",
     },
     {
         href: "/contact",
+        label: "Contact Us",
+    },
+    {
+        href: "/about",
         label: "About Us",
     },
 ] as const;
@@ -121,5 +120,46 @@ export const storeSocials = [
         icon: FaWhatsapp,
         href: "https://api.whatsapp.com/send?phone=555599880103",
         ariaLabel: "Fale conosco através do WhatsApp",
+    },
+] as const;
+
+
+// --- About Page --- //
+export const frequentQuestions = [
+    {
+        header: "Why can't I buy products?",
+        body: "This website is not a real store, but rather a personal project that uses the copyright of Cantinho da Moda. Therefore, if you want to buy products, contact the official store.",
+        footer: {
+            text: "To contact us, visit the page: ",
+            url: "/contact",
+            label: "contact"
+        }
+    },
+    {
+        header: "What types of products are sold?",
+        body: "At Cantinho da Moda we sell everything from summer to winter clothes. In addition, we also sell accessories, such as bags, earrings, necklaces and bracelets.",
+        footer: {
+            text: "Go to our page and enjoy: ",
+            url: "/catalog",
+            label: "catalog"
+        }
+    },
+    {
+        header: "How do I use the \"catalog\" page?",
+        body: "Simply change the search customizations, located on the left and top right corner of the page, and it will automatically update the products based on your selection.",
+        footer: {
+            text: "Go now and see new products: ",
+            url: "/catalog",
+            label: "catalog"
+        }
+    },
+    {
+        header: "What are the payment methods?",
+        body: "When visiting our physical store, we accept debit and credit cards from Visa, Mastercard, Elo and Cabal. Additionaly, we also accept payment via Pix and Banri Compras.",
+        footer: {
+            text: "If you have questions, contact us at: ",
+            url: "/contact",
+            label: "contact"
+        }
     },
 ] as const;
