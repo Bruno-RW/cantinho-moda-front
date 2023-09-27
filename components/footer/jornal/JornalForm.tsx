@@ -1,6 +1,6 @@
 const JornalForm = () => {
   return (
-    <div className="flex w-full sm:w-[90%] md:w-[70%] xl:w-[40%]">
+    <div className="flex w-[90%] md:w-[70%] xl:w-[40%]">
       <input type="email" id="emailNews" name="email" className="text-sm w-full h-12 px-2 outline-none rounded rounded-tr-none
       rounded-br-none" placeholder="Seu endereço de e-mail" autoComplete="email" required />
 

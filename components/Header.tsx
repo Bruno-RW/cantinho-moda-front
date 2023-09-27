@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <>
-            <header className="sticky flex top-0 items-center justify-between w-full z-50 py-[10px] sm:py-5 px-[30px] sm:px-20 bg-[#E3E6F3]">
+            <header className="section-p1 sticky flex top-0 items-center justify-between w-full z-50 py-[10px] sm:py-5 bg-[#E3E6F3]">
                 <Logo priority />
                 <nav className="">
                     <ul className="flex items-center justify-center m-0">
