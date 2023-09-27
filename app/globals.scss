@@ -2,27 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --fontcolor: 0, 0, 0;
-  --background: 214, 219, 220;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fontcolor: 255, 255, 255;
-    --background: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--fontcolor));
-  background: rgb(var(--background));
-} */
-
 body {
   width: 100%;
 }
 
+
+// --- Basic Style --- //
+h1 {
+  @apply text-5xl font-bold text-[#222] mb-5;
+}
+h2 {
+  @apply text-[46px] font-semibold text-[#222];
+}
+h3 {
+  @apply text-xl font-semibold text-[#222];
+}
+
+.section-p1 {
+  @apply px-5 sm:px-10 lg:px-20 py-10;
+}
+.section-m1 {
+  @apply my-10;
+}
+
+
+// --- TW Doesnt Cover --- //
 header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
@@ -31,8 +35,14 @@ header {
   box-shadow: 0 40px 60px rgba(0, 0, 0, .1);
 }
 
-footer {
-  #jornal {
-    background-position: 20% 30%;
+#jornal {
+  background-position: 20% 30%;
+}
+
+.question-box {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .14);
+
+  &:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .22);
   }
 }
