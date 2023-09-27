@@ -15,7 +15,7 @@ export default function About() {
 
             <section className="section-p1 flex flex-col lg:flex-row justify-between">
                 <div className="w-full lg:w-3/5 lg:mr-10 mb-10 lg:mb-0">
-                    <h1 className="text-center md:text-start mb-7">Who are we?</h1>
+                    <h2 className="text-center md:text-start">Who are we?</h2>
                     <p className="text-xl text-justify md:text-start mb-5">The company Cantinho da Moda is a fashion store focused on selling clothes and accessories for women with different tastes and needs. Cantinho da Moda is always up to date with the latest fashion trends, ensuring that our customers are always elegant.</p>
                     <p className="text-xl text-justify md:text-start">Additionally, we pride ourselves on offering high-quality clothing and accessories. So, if you're looking for a reliable, high-quality fashion store, look no further than Cantinho da Moda. Come visit us and see for yourself everything we have to offer!</p>
                 </div>
@@ -24,7 +24,7 @@ export default function About() {
             </section>
 
             <section className="section-p1 flex flex-col">
-                <h2 className="text-center md:text-start mb-5">Frequent Questions</h2>
+                <h2 className="text-center md:text-start">Frequent Questions</h2>
 
                 <div className="flex flex-wrap justify-center gap-y-5 sm:gap-x-5">
                     <MapContent data={frequentQuestions} type="question" />
