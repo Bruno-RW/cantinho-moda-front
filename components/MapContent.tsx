@@ -34,7 +34,7 @@ const MapContent = ( {data, type}: MapContentProps ) => {
         case "payment":
             mapData = data.map((element, index) => (
                 <React.Fragment key={index}>
-                    <Image src={element.src ?? "#"} height={34} className="mr-1 last:mr-0" alt={element.alt ?? "Payment method"} />
+                    <Image src={element.src ?? "#"} width={50} className="mr-1 last:mr-0" alt={element.alt ?? "Payment method"} />
                 </React.Fragment>
             ));
         break;

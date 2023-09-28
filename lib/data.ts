@@ -2,10 +2,10 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 import logoLgImg from "@/public/images/icons/logos/logo-black-lg.png";
 
-import visaImg from "@/public/images/icons/payment/visa.png";
-import masterImg from "@/public/images/icons/payment/master.png";
-import eloImg from "@/public/images/icons/payment/elo.png";
-import pixImg from "@/public/images/icons/payment/pix.png";
+import visaSvg   from "@/public/images/icons/payment/visa.svg";
+import masterSvg from "@/public/images/icons/payment/master.svg";
+import eloSvg    from "@/public/images/icons/payment/elo.svg";
+import pixSvg    from "@/public/images/icons/payment/pix.svg";
 
 // --- General --- //
 export const logo = logoLgImg;
@@ -88,19 +88,19 @@ export const storeAccount = [
 
 export const storePaymentMethods = [
     {
-        src: visaImg,
+        src: visaSvg,
         alt: "Visa",
     },
     {
-        src: masterImg,
+        src: masterSvg,
         alt: "Mastercard",
     },
     {
-        src: eloImg,
+        src: eloSvg,
         alt: "Elo",
     },
     {
-        src: pixImg,
+        src: pixSvg,
         alt: "Pix",
     },
 ] as const;
