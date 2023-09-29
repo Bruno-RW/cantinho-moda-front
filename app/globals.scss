@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  width: 100%;
+  @apply w-full bg-gray-50;
 }
 
 
@@ -26,10 +26,10 @@ h3 {
 }
 
 .borderBlack {
-  @apply border border-black/10 focus:border-black/50;
+  @apply border border-black/20 focus:border-black/50;
 }
 
-// --- TW Doesnt Cover --- //
+// --- TW Does not Cover --- //
 header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
