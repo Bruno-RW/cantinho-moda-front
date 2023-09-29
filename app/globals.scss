@@ -9,13 +9,13 @@ body {
 
 // --- Basic Style --- //
 h1 {
-  @apply text-5xl font-bold text-[#222] mb-5;
+  @apply text-5xl lg:text-6xl font-bold text-[#222] mb-5 break-all sm:break-normal;
 }
 h2 {
-  @apply text-[46px] font-semibold text-[#222];
+  @apply text-[46px] font-bold text-[#222] mb-5 break-all sm:break-normal;
 }
 h3 {
-  @apply text-xl font-semibold text-[#222];
+  @apply text-xl font-semibold text-[#222] mb-4 break-all sm:break-normal;
 }
 
 .section-p1 {
@@ -25,6 +25,9 @@ h3 {
   @apply my-10;
 }
 
+.borderBlack {
+  @apply border border-black/10 focus:border-black/50;
+}
 
 // --- TW Doesnt Cover --- //
 header {

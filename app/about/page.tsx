@@ -24,7 +24,7 @@ export default function About() {
             </section>
 
             <section className="section-p1 flex flex-col">
-                <h2 className="text-center md:text-start">Frequent Questions</h2>
+                <h2 className="text-center md:text-start">Frequent questions</h2>
 
                 <div className="flex flex-wrap justify-center gap-y-5 sm:gap-x-5">
                     <MapContent data={frequentQuestions} type="question" />
