@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 import logoLgImg from "@/public/images/icons/logos/logo-black-lg.png";
+import pfpPlaceHolder from "@/public/images/pictures/pfp.png";
 
 import visaSvg   from "@/public/images/icons/payment/visa.svg";
 import masterSvg from "@/public/images/icons/payment/master.svg";
@@ -161,5 +162,28 @@ export const frequentQuestions = [
             url: "/contact",
             label: "contact"
         }
+    },
+] as const;
+
+
+// --- Contact Page --- //
+export const teamMembers = [
+    {
+        src: pfpPlaceHolder,
+        name: "Mônica Lima",
+        title: "Business Owner",
+        email: "example-name@email.com",
+    },
+    {
+        src: pfpPlaceHolder,
+        name: "Bruno Wünsch",
+        title: "Development Manager",
+        email: "bruno_wunsch@hotmail.com",
+    },
+    {
+        src: pfpPlaceHolder,
+        name: "Name Lastname",
+        title: "Marketing Manager",
+        email: "example-name@email.com",
     },
 ] as const;
